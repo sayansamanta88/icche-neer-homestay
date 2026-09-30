@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <link rel="stylesheet" href="./assets/style.css">
+  
 </head>
 <body>
 <header class="nav">
@@ -93,7 +93,7 @@
     <div class="form-row"><label>Phone<input name="phone" type="tel" required autocomplete="tel" placeholder="+91"></label><label>Guests<select name="guests" required><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label></div>
     <div class="form-row"><label>Check-in<input name="checkin" type="date" required></label><label>Check-out<input name="checkout" type="date" required></label></div>
     <label>Message<textarea name="message" rows="4" placeholder="Tell us about your trip, room preference or any questions."></textarea></label>
-    <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="auto"></div>
+    <input name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
     <button class="btn btn-dark" type="submit" id="submit-btn">Send booking enquiry</button>
     <p id="form-status" class="form-status" role="status"></p>
     <p class="privacy-note">We use your details only to respond to this booking enquiry.</p>
@@ -102,6 +102,6 @@
 </main>
 
 <footer><div class="footer-brand"><span class="brand-mark">MN</span><strong>Icchē Neer Homestay</strong></div><span>© <span id="year"></span> Icchē Neer. All rights reserved.</span><span>Made for slow travel.</span></footer>
-<script src="/assets/app.js"></script>
+<script src="./assets/app.js"></script>
 </body>
 </html>

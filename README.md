@@ -1,4 +1,4 @@
-# Icchē Neer Homestay — Cloudflare Pages
+# Icchē Neer Homestay — GitHub Pages
 
 A responsive one-page homestay landing page with:
 - Full-screen hero image slider using Unsplash-hosted images
@@ -7,8 +7,8 @@ A responsive one-page homestay landing page with:
 - Amenities section
 - Auto-rotating guest testimonial slider
 - Booking/contact form
-- Cloudflare Turnstile anti-bot verification
-- Cloudflare Pages Function that validates Turnstile and sends enquiries through Resend
+- Honeypot anti-spam protection
+- GitHub Pages Function that validates Turnstile and sends enquiries through Resend
 
 ## 1. Customize the website
 
@@ -52,7 +52,7 @@ Example:
 - BOOKING_TO_EMAIL = your personal/business email where enquiries should arrive
 - BOOKING_FROM_EMAIL = bookings@yourdomain.com (after verifying your domain in Resend)
 
-## 4. Deploy to Cloudflare Pages with GitHub
+## 4. Deploy to GitHub Pages with GitHub
 
 1. Create a GitHub repository, e.g. `homestay-website`.
 2. Upload all files/folders from this project.
@@ -63,11 +63,11 @@ Example:
 7. Build output directory: `.`
 8. Deploy.
 
-Cloudflare Pages will provide a `*.pages.dev` URL.
+GitHub Pages will provide a `*.pages.dev` URL.
 
 ## 5. Add environment variables
 
-In your Cloudflare Pages project:
+In your GitHub Pages project:
 Settings → Environment variables / Variables and Secrets.
 
 Add:
@@ -94,7 +94,7 @@ Open the deployed site, submit a booking enquiry, complete Turnstile and check t
 If the form says it cannot send:
 - confirm the four Cloudflare environment variables
 - confirm your Resend sending domain/from address is verified
-- check Cloudflare Pages Functions logs
+- check GitHub Pages Functions logs
 - check Resend logs
 
 ## Optional later upgrades
@@ -121,3 +121,16 @@ Phone and booking email were not supplied yet, so the page currently shows place
 - `YOUR_EMAIL@example.com`
 
 Replace those before publishing.
+
+
+## GitHub Pages version
+
+This package is designed to run directly on GitHub Pages.
+
+1. Upload `index.html`, `assets/`, `CUSTOMIZE.txt`, and `README.md` to the root of your repository.
+2. Enable GitHub Pages from Settings → Pages → Deploy from branch → `main` → `/ (root)`.
+3. The CSS and JavaScript use relative paths (`./assets/...`) so they work on a repository/project URL.
+4. The booking form uses Formspree. Create a form at https://formspree.io/ and replace `YOUR_FORMSPREE_FORM_ID` in `assets/app.js`.
+5. Replace the phone/email placeholders in `index.html`.
+
+GitHub Pages cannot execute the previous `functions/api/booking.js`; that file is intentionally omitted from this GitHub Pages package.
