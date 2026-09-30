@@ -1,0 +1,34 @@
+QUICK CUSTOMIZATION
+
+1. Homestay name: Icchē Neer Homestay
+   Search "Mountain Nest Homestay" in index.html and replace it.
+
+2. Contact:
+   Replace:
+   hello@yourhomestay.com
+   +91 90000 00000
+   Your town, West Bengal
+
+3. Map:
+   Replace the OpenStreetMap iframe src with your actual location.
+   You can generate an OpenStreetMap embed from https://www.openstreetmap.org/export
+
+4. Turnstile:
+   Replace YOUR_TURNSTILE_SITE_KEY in index.html.
+
+5. Booking email:
+   Configure these Cloudflare secrets:
+   TURNSTILE_SECRET
+   RESEND_API_KEY
+   BOOKING_TO_EMAIL
+   BOOKING_FROM_EMAIL
+
+6. Photos:
+   Replace the Unsplash image URLs in index.html with your own image URLs when available.
+
+Current details:
+- Location: Icchēgaon
+- Rooms: 4
+- Special feature: Kanchenjunga view
+- Phone/WhatsApp: not supplied yet
+- Email: not supplied yet
